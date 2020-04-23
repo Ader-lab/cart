@@ -1,0 +1,490 @@
+// 其它要覆蓋掉原本的預設bootstrap樣式-變數-要放在這上面
+@import "./variables.scss";
+// Import Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap.scss";
+p {
+  // margin-bottom: 0;
+}
+
+#cart {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  > .shoppingProcess {
+    width: 100%;
+    height: auto;
+    border-top: 10px solid #d9c8b4;
+    overflow: hidden;
+    > .shoppingImg {
+      width: 60%;
+      height: auto;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: line(3);
+      > .cicle {
+        width: 30px;
+        height: 30px;
+        border-radius: 999em;
+        background-color: rgba(107, 104, 104, 0.3);
+        text-align: center;
+      }
+      > div:nth-child(1) {
+        background-color: #d9c8b4;
+      }
+      > .cicle::after {
+        content: "1";
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+      }
+      > .center::after {
+        content: "2";
+      }
+      > .right::after {
+        content: "3";
+      }
+      > p {
+        @include font(1);
+        text-align: center;
+        margin-bottom: 0;
+        // margin: 0 line(2);
+      }
+    }
+  }
+  > .cartBody {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: line(3) 0;
+    > .cartContent {
+      width: 60%;
+      height: auto;
+      overflow: hidden;
+      border: 1px solid #d9c8b4;
+      margin: 0 auto;
+      > main {
+        width: 100%;
+        > table {
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+          td {
+            padding: 8px;
+            // width: 35%;
+            @include font(1);
+            > .checkboxStyle {
+              text-align: left;
+              input + label:before {
+                content: "⬜️";
+                margin-right: line(1);
+              }
+              input:checked + label:before {
+                content: "✔️";
+              }
+              input {
+                display: none;
+              }
+              > img {
+                width: 12%;
+              }
+            }
+            > div {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              > button {
+                padding: 0;
+                width: 30px;
+                height: 30px;
+              }
+              > .cartQuantity {
+                padding: 0;
+                width: 60px;
+                height: 30px;
+                text-align: center;
+              }
+              > p {
+                margin-left: line(1);
+              }
+            }
+          }
+          th {
+            padding: 8px;
+            color: #000;
+            border-bottom: 1px solid #d9c8b4;
+            > p {
+              display: inline-block;
+            }
+            .checkboxStyle {
+              text-align: left;
+              input + label:before {
+                content: "⬜️";
+                margin-right: 10px;
+              }
+              input:checked + label:before {
+                content: "✔️";
+              }
+              input {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      > footer {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: line(2) 0;
+        background-color: #ededed;
+        > div {
+          width: 40%;
+          height: auto;
+          overflow: hidden;
+          float: right;
+          > p {
+            text-align: right;
+            @include font(1);
+            margin-right: line(1);
+          }
+          > p:nth-child(1) {
+            padding-top: line(1);
+          }
+          > button {
+            float: right;
+            width: 30%;
+            background-color: #5d3a26;
+            color: #fff;
+            margin-right: line(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------------------ */
+
+#checkoutPage {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  > .shoppingProcess {
+    width: 100%;
+    height: auto;
+    border-top: 10px solid #d9c8b4;
+    overflow: hidden;
+    .shoppingImg {
+      width: 60%;
+      height: auto;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: line(3);
+      > .cicle {
+        width: 30px;
+        height: 30px;
+        border-radius: 999em;
+        background-color: rgba(107, 104, 104, 0.3);
+        text-align: center;
+      }
+      > div:nth-child(4) {
+        background-color: #d9c8b4;
+      }
+      > .cicle::after {
+        content: "1";
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+      }
+      > .center::after {
+        content: "2";
+      }
+      > .right::after {
+        content: "3";
+      }
+      > p {
+        @include font(1);
+        text-align: center;
+        margin-bottom: 0;
+        // margin: 0 line(2);
+      }
+    }
+  }
+  > .checkoutBody {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    > .checkoutContent {
+      width: 70%;
+      height: auto;
+      overflow: hidden;
+      margin: 0 auto;
+      > header {
+        background-color: #fff;
+        margin: line(5) 0;
+        width: 100%;
+        > table {
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+          td {
+            // border: 1px solid #ddd;
+            padding: 8px;
+            @include font(1);
+            > div {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              > img {
+                width: 12%;
+              }
+              > p {
+                margin-left: line(1);
+              }
+            }
+          }
+          th {
+            padding: 8px;
+            color: #000;
+            border-bottom: 1px solid #d9c8b4;
+            > p {
+              display: inline-block;
+            }
+          }
+        }
+        > nav {
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+          //   display: flex;
+          > p {
+            margin-left: line(1);
+          }
+          > p:nth-child(1) {
+            @include font(5);
+            color: #5d3a26;
+          }
+          > a {
+            margin-left: line(1);
+            margin-bottom: line(1);
+            color: #5d3a26;
+          }
+        }
+      }
+      footer {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        background-color: #fff;
+        nav {
+          display: flex;
+          border-bottom: 1px solid #d9c8b4;
+          padding: line(1);
+          @include font(3);
+          > p {
+            margin-left: line(1);
+          }
+          > a {
+            color: #5d3a26;
+            margin-left: line(3);
+          }
+        }
+        > div {
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+          float: right;
+          > p {
+            text-align: right;
+            padding-top: line(1);
+            margin-right: line(2);
+          }
+          > button {
+            float: right;
+            width: 9%;
+            background-color: #5d3a26;
+            color: #fff;
+            margin-right: line(2);
+            margin-bottom: line(3);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------------- */
+
+#orderDetails {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  // background-color: #f5f5f5;
+  > .shoppingProcess {
+    width: 100%;
+    height: auto;
+    border-top: 10px solid #d9c8b4;
+    overflow: hidden;
+    .shoppingImg {
+      width: 60%;
+      height: auto;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: line(3);
+      > .cicle {
+        width: 30px;
+        height: 30px;
+        border-radius: 999em;
+        background-color: rgba(107, 104, 104, 0.3);
+        text-align: center;
+      }
+      > div:nth-child(7) {
+        background-color: #d9c8b4;
+      }
+      > .cicle::after {
+        content: "1";
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+      }
+      > .center::after {
+        content: "2";
+      }
+      > .right::after {
+        content: "3";
+      }
+      > p {
+        @include font(1);
+        text-align: center;
+        margin-bottom: 0;
+        // margin: 0 line(2);
+      }
+    }
+  }
+  > .orderBody {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: line(5) 0;
+    > .orderContent {
+      width: 50%;
+      height: auto;
+      overflow: hidden;
+      // border: 1px solid #d9c8b4;
+      margin: 0 auto;
+      header {
+        // margin: line(5) 0;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        // display: flex;
+        // justify-content: center;
+        // flex-wrap: wrap;
+        // align-items: center;
+        text-align: center;
+        > h2 {
+          margin: 0 auto;
+          @include font(7);
+        }
+        > p:nth-child(3) {
+          margin: 0 auto;
+          @include font(1);
+        }
+      }
+      > main {
+        background-color: #fff;
+        margin: line(5) 0;
+        width: 100%;
+        > table {
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          // border: 1px solid #d9c8b4;
+          border-collapse: collapse;
+          width: 100%;
+          td {
+            // border: 1px solid #ddd;
+            padding: 8px;
+            @include font(1);
+            > div {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              > p {
+                margin-left: line(1);
+              }
+            }
+          }
+          th {
+            padding: 8px;
+            text-align: left;
+            color: #000;
+            border-bottom: 1px solid #d9c8b4;
+            > p {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      > footer {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: line(2) 0;
+        background-color: #ededed;
+        > div {
+          width: 40%;
+          height: auto;
+          overflow: hidden;
+          float: right;
+          > p {
+            text-align: right;
+            @include font(2);
+            margin-right: line(1);
+          }
+          > p:nth-child(1) {
+            padding-top: line(1);
+          }
+        }
+      }
+      > section {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding-top: line(1);
+        > p {
+          @include font(2);
+          padding-top: line(1);
+        }
+        > button {
+          float: right;
+          width: 20%;
+          background-color: #5d3a26;
+          color: #fff;
+          margin-right: line(1);
+        }
+      }
+    }
+  }
+}
+
+.spinner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  .spinnerBody {
+    width: 50px;
+    height: 50px;
+  }
+}
